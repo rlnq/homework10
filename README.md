@@ -15,7 +15,6 @@ Steps:
 > FROM nginx:1.23.3-alpine
 > COPY site-nginx /usr/share/nginx/html/
 > CMD ["nginx", "-g", "daemon off;"]
-> ```
 
 * to build docker image with Dockerfile in current directory:
 
@@ -40,3 +39,24 @@ must be in the private network
 example: google.com )
 B ) The second container ping the first container via a private network
 5. Report save in GitHub repository
+
+* to create private and public network:
+> ``
+> `docker network create public`
+> `docker network create private --internal`
+
+* Dockerfile:
+> ```
+> FROM ubuntu:latest
+> RUN apt-get update && apt-get install -y iputils-ping 
+
+* to run two containers, one with private and public networks, second only with private network:
+> `docker run -d --name priv-app --network private tast2:latest`
+> `docker run -d --name pub-app --network public tast2:latest`
+
+
+
+
+
+
+
