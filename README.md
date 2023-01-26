@@ -51,8 +51,20 @@ B ) The second container ping the first container via a private network
 > RUN apt-get update && apt-get install -y iputils-ping 
 
 * to run two containers, one with private and public networks, second only with private network:
-> `docker run -d --name priv-app --network private tast2:latest`
-> `docker run -d --name pub-app --network public tast2:latest`
+> ``` 
+> docker run -d --rm --name priv-app --network private task2:latest sleep 1200
+> docker run -d --rm --name pub-app --network public task2:latest sleep 1200
+
+<img width="1240" alt="Screenshot 2023-01-27 at 01 15 35" src="https://user-images.githubusercontent.com/117667360/214971865-14b27e05-a55c-4db8-a30a-94306398e259.png">
+
+* connect our container to private network:
+> `docker network connect public priv-app`
+
+* connect to our container with private network:
+> `docker exec -it priv-app sh`
+
+
+
 
 
 
