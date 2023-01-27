@@ -50,7 +50,8 @@ B ) The second container ping the first container via a private network
 * Dockerfile:
 > ```
 > FROM ubuntu:latest
-> RUN apt-get update && apt-get install -y iputils-ping 
+> RUN apt-get update && apt-get install -y iputils-ping
+> CMD bash
 
 * run two containers, one with private and public networks, second only with private network:
 > ``` 
