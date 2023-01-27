@@ -70,18 +70,23 @@ Steps:
 
 ## We will see next docker network configurations:
 
-Public network
+#### Public network
+
 <img width="1242" alt="Screenshot 2023-01-27 at 01 53 22" src="https://user-images.githubusercontent.com/117667360/214976554-b3c0600b-f07d-4609-a6e0-25bc02113269.png">
-Private network
+
+#### Private network
+
 <img width="1241" alt="Screenshot 2023-01-27 at 01 53 36" src="https://user-images.githubusercontent.com/117667360/214976568-88d8d20d-e34f-4747-83f2-ac9b1d3600fc.png">
 
 
 
 # Result:
-"pub-app" container with public and private networks:
+#### "pub-app" container with public and private networks:
+
 <img width="1240" alt="Screenshot 2023-01-27 at 01 41 09" src="https://user-images.githubusercontent.com/117667360/214975265-ddbede01-ab9a-4b02-88cc-84eb5812e5da.png">
  
-"priv-app" container only with private networks (no access to google.com):
+#### "priv-app" container only with private networks (no access to google.com):
+
 <img width="1242" alt="Screenshot 2023-01-27 at 01 40 10" src="https://user-images.githubusercontent.com/117667360/214975303-4018345f-c6b6-4143-9582-4aa760387069.png">
 
 
