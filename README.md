@@ -8,7 +8,7 @@
 5. Open page in Web Browser
 6. Report save in GitHub repository
 
-## Steps:
+### Steps:
 
 * create Dockerfile:
 > ```
@@ -40,7 +40,7 @@ example: google.com )
 B ) The second container ping the first container via a private network
 5. Report save in GitHub repository
 
-Steps:
+### Steps:
 
 * create private and public network:
 > ```
