@@ -16,13 +16,13 @@
 > COPY site-nginx /usr/share/nginx/html/
 > CMD ["nginx", "-g", "daemon off;"]
 
-* build docker image with Dockerfile in current directory:
+* creating docker images from the Dockerfile in the current directory:
 
 > `docker build -t test2 .`
 
 <img width="1241" alt="Screenshot 2023-01-26 at 21 52 19" src="https://user-images.githubusercontent.com/117667360/214943283-9ddb3414-fa5a-4b93-9859-5c7111d62c67.png">
 
-* run docker containter with port 8080:
+* start a docker container with port 8080:
 
 > `docker run -d -p 8080:80 1c2da2338549`
 
@@ -42,7 +42,7 @@ B ) The second container ping the first container via a private network
 
 ### Steps:
 
-* create private and public network:
+* creation of a private and public network:
 > ```
 > docker network create public
 > docker network create private --internal
@@ -53,18 +53,20 @@ B ) The second container ping the first container via a private network
 > RUN apt-get update && apt-get install -y iputils-ping
 > CMD bash
 
-* run two containers, one with private and public networks, second only with private network:
+* running two containers, one with private and public networks, the other with only private network:
 > ``` 
 > docker run -d --rm --name priv-app --network private task2:latest sleep 1200
 > docker run -d --rm --name pub-app --network public task2:latest sleep 1200
 
 <img width="1240" alt="Screenshot 2023-01-27 at 01 15 35" src="https://user-images.githubusercontent.com/117667360/214971865-14b27e05-a55c-4db8-a30a-94306398e259.png">
 
-* connect our container to private network:
+* connecting the container to a private network:
 > `docker network connect private pub-app`
 
+* executing a command in a running container
+> `docker exec -it priv-app sh`
 
-## We will see the following configurations of Docker networks:
+## We will see the following Docker network configurations:
 
 #### Public network
 
