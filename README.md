@@ -63,9 +63,6 @@ B ) The second container ping the first container via a private network
 * connecting the container to a private network:
 > `docker network connect private pub-app`
 
-* executing a command in a running container
-> `docker exec -it priv-app sh`
-
 ## We will see the following Docker network configurations:
 
 #### Public network
@@ -76,6 +73,8 @@ B ) The second container ping the first container via a private network
 
 <img width="1241" alt="Screenshot 2023-01-27 at 01 53 36" src="https://user-images.githubusercontent.com/117667360/214976568-88d8d20d-e34f-4747-83f2-ac9b1d3600fc.png">
 
+* executing a command in a running container
+> `docker exec -it priv-app sh`
 
 
 # Result:
