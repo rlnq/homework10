@@ -26,7 +26,7 @@
 
 > `docker run -d -p 8080:80 1c2da2338549`
 
-<img width="654" alt="image" src="https://user-images.githubusercontent.com/117667360/214944309-1f0614a8-22d7-4483-84af-e8fbfb4c9618.png">
+<img width="654" alt="214944309-1f0614a8-22d7-4483-84af-e8fbfb4c9618" src="https://user-images.githubusercontent.com/117667360/216445654-25a477e7-f373-4b52-8ffa-49d279a48db3.png">
 
 ---------------------------------
 
